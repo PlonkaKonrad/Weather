@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(
+    rgba(55, 120, 180, 1) 14%,
+    rgba(8, 7, 91, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Notable", sans-serif;
+}
+
+.map {
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(images/map.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: center;
+}
+
+.mapscale {
+  transform: scale(5);
+  opacity: 0;
+  transition: 1s;
+}
+
+button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+}
+button::after {
+  content: "";
+  height: 30px;
+  background-color: dodgerblue;
+  position: absolute;
+  border: 2px solid black;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+/* RED CITY BUTTON POSITIONS */
+.city-krakow-btn {
+  left: 57%;
+  top: 82%;
+}
+
+.backToMap-btn {
+  width: 100px;
+  height: 100px;
+  background-image: url(images/map.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 50px;
+  top: 50px;
+  display: none;
+  opacity: 0%;
+}
+
+.backToMap-btn-active {
+  display: flex;
+  opacity: 100%;
+  transition: 1s;
+}
+.backToMap-btn-active:hover {
+}
+
+.city-Białystok-btn {
+  left: 80%;
+  top: 30%;
+}
+
+.city-Bydgoszcz-btn {
+  left: 40%;
+  top: 30%;
+}
+
+.city-Gdańsk-btn {
+  left: 40%;
+  top: 5%;
+}
+
+.city-Katowice-btn {
+  top: 75%;
+  left: 45%;
+}
+
+.city-Kielce-btn {
+  left: 60%;
+  top: 70%;
+}
+
+.city-Lublin-btn {
+  left: 80%;
+  top: 60%;
+}
+
+.city-Łódź-btn {
+  left: 50%;
+  top: 55%;
+}
+
+.city-Olsztyn-btn {
+  top: 15%;
+  left: 60%;
+}
+
+.city-Opole-btn {
+  top: 70%;
+  left: 35%;
+}
+
+.city-Poznań-btn {
+  left: 30%;
+  top: 40%;
+}
+
+.city-Rzeszów-btn {
+  left: 75%;
+  top: 80%;
+}
+
+.city-Szczecin-btn {
+  left: 12%;
+  top: 20%;
+}
+
+.city-Warszawa-btn {
+  left: 62%;
+  top: 45%;
+}
+
+.city-Wrocław-btn {
+  left: 25%;
+  top: 60%;
+}
+
+.city-ZielonaGóra-btn {
+  left: 15%;
+  top: 47%;
+}
+
+/* DISPLAY CITY NAME AFTER HOVER*/
+.city-krakow-btn:hover::after {
+  display: flex;
+  content: "Kraków";
+}
+
+.city-Białystok-btn:hover::after {
+  display: flex;
+  content: "Białystok";
+}
+
+.city-Bydgoszcz-btn:hover::after {
+  display: flex;
+  content: "Bydgoszcz";
+}
+
+.city-Gdańsk-btn:hover::after {
+  display: flex;
+  content: "Gdańsk";
+}
+
+.city-Katowice-btn:hover::after {
+  display: flex;
+  content: "Katowice";
+}
+
+.city-Kielce-btn:hover::after {
+  display: flex;
+  content: "Kielce";
+}
+
+.city-Lublin-btn:hover::after {
+  display: flex;
+  content: "Lublin";
+}
+
+.city-Łódź-btn:hover::after {
+  display: flex;
+  content: "Łódź";
+}
+
+.city-Olsztyn-btn:hover::after {
+  display: flex;
+  content: "Olsztyn";
+}
+
+.city-Opole-btn:hover::after {
+  display: flex;
+  content: "Opole";
+}
+
+.city-Poznań-btn:hover::after {
+  display: flex;
+  content: "Poznań";
+}
+
+.city-Rzeszów-btn:hover::after {
+  display: flex;
+  content: "Rzeszów";
+}
+
+.city-Szczecin-btn:hover::after {
+  display: flex;
+  content: "Szczecin";
+}
+
+.city-Warszawa-btn:hover::after {
+  display: flex;
+  content: "Warszawa";
+}
+
+.city-Wrocław-btn:hover::after {
+  display: flex;
+  content: "Wrocław";
+}
+
+.city-ZielonaGóra-btn:hover::after {
+  display: flex;
+  content: "Zielona Góra";
+}
+
+.info {
+  width: 600px;
+  height: 500px;
+  transition: 1s linear;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 2s;
+  opacity: 0;
+}
+
+.info-active {
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  transition: 2s;
+  opacity: 100%;
+}
