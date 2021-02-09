@@ -2,6 +2,8 @@ body {
   margin: 0;
   width: 100%;
   height: 100vh;
+  font-family: Arial;
+  color: white;
 }
 
 .container {
@@ -23,8 +25,6 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  font-family: arial;
 }
 
 .map {
@@ -71,10 +71,6 @@ button::after {
   margin-left: 20px;
 }
 /* RED CITY BUTTON POSITIONS */
-.city-krakow-btn {
-  left: 57%;
-  top: 82%;
-}
 
 .backToMap-btn {
   width: 100px;
@@ -93,6 +89,11 @@ button::after {
   display: flex;
   opacity: 100%;
   transition: 1s;
+}
+
+.city-krakow-btn {
+  left: 57%;
+  top: 82%;
 }
 
 .city-Białystok-btn {
@@ -254,13 +255,10 @@ button::after {
 .info {
   width: 600px;
   height: 500px;
-  transition: 1s linear;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: none;
-  transition: 2s;
-  opacity: 0;
 }
 
 .info-active {
@@ -269,8 +267,6 @@ button::after {
   left: 50%;
   top: 50%;
   display: flex;
-  transition: 2s;
-  opacity: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -279,13 +275,11 @@ button::after {
 .top-info > .name {
   height: 70px;
   width: 100px;
-  color: white;
   font-weight: 700;
   font-size: 40px;
-  font-family: arial;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 10px;
+  top: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -295,26 +289,13 @@ button::after {
   width: 150px;
   height: 70px;
   position: absolute;
-  left: 70%;
-  top: 0;
-  transform: translate(-50%);
+  right: 10px;
+  top: 10px;
   font-size: 50px;
   font-weight: 700;
-  font-family: Arial;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.top-info > .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  display: none;
 }
 
 .pollution {
@@ -325,8 +306,6 @@ button::after {
   transform: translateY(-50%);
   font-size: 10px;
   font-weight: 700;
-  font-family: Arial;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,8 +315,6 @@ button::after {
 .pollution1 {
   font-size: 50px;
   font-weight: 700;
-  font-family: Arial;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -365,11 +342,122 @@ button::after {
 .air-quality1 {
   font-size: 30px;
   font-weight: 700;
-  font-family: Arial;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 5px black;
+}
+
+.compass {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 25%;
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-image: url(images/arrow.png);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.compass > p {
+  position: absolute;
+  border: 1px solid black;
+  background-color: blue;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+p:nth-child(1) {
+  background-color: red;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+}
+
+p:nth-child(2) {
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+p:nth-child(3) {
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+p:nth-child(4) {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.windspeed {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 150px;
+}
+.windspeed > h2 {
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+.windspeed1 {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.pressure {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.pressure > h2 {
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+.pressure1 {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
 }
