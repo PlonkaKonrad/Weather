@@ -461,3 +461,19 @@ p:nth-child(4) {
   font-size: 40px;
   font-weight: 700;
 }
+
+@media (max-width: 600px) {
+  .map {
+    transform: scale(0.6) translate(-80%, -50%);
+  }
+
+  .info-active {
+    transform: scale(0.5) translate(-100%, -50%);
+  }
+
+  .backToMap-btn-active {
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
