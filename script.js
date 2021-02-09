@@ -129,7 +129,7 @@ $('.city-ZielonaGóra-btn').click(()=>{
 
 function fetchData(city, state) {
 
- let api = 'http://api.airvisual.com/v2/city?city='+city+'&state='+state+'&country=poland&key=00674f74-d649-40be-8d45-2eab67f15699';
+ let api = 'https://api.airvisual.com/v2/city?city='+city+'&state='+state+'&country=poland&key=00674f74-d649-40be-8d45-2eab67f15699';
  fetch(api)
     .then(response =>{
         return response.json();

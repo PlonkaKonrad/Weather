@@ -24,7 +24,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-family: "Secular One", sans-serif;
+  font-family: arial;
 }
 
 .map {
@@ -93,8 +93,6 @@ button::after {
   display: flex;
   opacity: 100%;
   transition: 1s;
-}
-.backToMap-btn-active:hover {
 }
 
 .city-Białystok-btn {
